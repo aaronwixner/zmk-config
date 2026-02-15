@@ -66,12 +66,12 @@
                 nums_layer {
 // -----------------------------------------------------------------------------------------
 // |     | F1  | F2  | F3  | F4  |     |   | DEL |  7  |  8  |  9  | NUM |     |
-// |     | F5  | F6  | F7  | F8  |     |   | TAB |  4  |  5  |  6  |  .  |     |
+// |     |F5/GU|F6/AL|F7/CT|F8/SF|     |   | TAB |4/SFT|5/CTL|6/ALT| ./GU|     |
 // |     | F9  | F10 | F11 | F12 |     |   |  0  |  1  |  2  |  3  | ESC |     |
 //                   |     | SPC |     |   |     | ENT |BS/DEL|
                         bindings = <
    &none &kp F1 &kp F2  &kp F3  &kp F4  &none     &kp DEL &kp N7 &kp N8 &kp N9 &kp KP_NUM &none
-   &none &kp F5 &kp F6  &kp F7  &kp F8  &none     &kp TAB &kp N4 &kp N5 &kp N6 &kp DOT    &none
+   &none &hm LGUI F5 &hm LALT F6 &hm LCTRL F7 &hm LSHFT F8 &none   &kp TAB &hm RSHFT N4 &hm RCTRL N5 &hm RALT N6 &hm RGUI DOT &none
    &none &kp F9 &kp F10 &kp F11 &kp F12 &none     &kp N0  &kp N1 &kp N2 &kp N3 &kp ESC    &none
                          &trans  &kp SPACE &trans   &trans  &kp RET &td_bspc
                         >;
@@ -80,12 +80,12 @@
                 syms_layer {
 // -----------------------------------------------------------------------------------------
 // |     |  ,  |  %  |  @  |  '  |  :  |   |  ^  |  &  |  *  |  $  |     |     |
-// |     |  /  |  {  |  ;  |  (  |  +  |   |  -  |  )  |  =  |  }  |  `  |     |
+// |     | //GU| {/AL| ;/CT| (/SF|  +  |   |  -  | )/SF| =/CT| }/AL| `/GU|     |
 // |     |  #  |  ~  |  &  |  ?  |  |  |   |  \  |  !  |  [  |  ]  |  _  |     |
 //                   | GUI | SPC |     |   |     | ENT |BS/DEL|
                         bindings = <
    &none &kp COMMA &kp PRCNT &kp AT    &kp SQT  &kp COLON   &kp CARET &kp AMPS  &kp ASTRK &kp DLLR &none    &none
-   &none &kp FSLH  &kp LBRC  &kp SEMI  &kp LPAR &kp PLUS    &kp MINUS &kp RPAR  &kp EQUAL &kp RBRC &kp GRAVE &none
+   &none &hm LGUI FSLH &hm LALT LBRC &hm LCTRL SEMI &hm LSHFT LPAR &kp PLUS   &kp MINUS &hm RSHFT RPAR &hm RCTRL EQUAL &hm RALT RBRC &hm RGUI GRAVE &none
    &none &kp HASH  &kp TILDE &kp AMPS  &kp QMARK &kp PIPE   &kp BSLH  &kp EXCL  &kp LBKT  &kp RBKT &kp UNDER &none
                               &kp LGUI  &kp SPACE &trans      &trans    &kp RET   &td_bspc
                         >;
@@ -94,12 +94,12 @@
                 nav_layer {
 // -----------------------------------------------------------------------------------------
 // |     |BTCLR| BT1 | BT2 | BT3 | BT4 |   |     |     |     |     |     |     |
-// |     |     | PREV| PLAY| NEXT| VOLU|   | DEL | LFT | DWN |  UP | RGT |     |
+// |     |     |PV/AL|PL/CT|NX/SF| VOLU|   | DEL |LF/SF|DN/CT|UP/AL|RT/GU|     |
 // |     |     |     |     |     | VOLD|   | ESC | HOME| PGDN| PGUP| END |     |
 //                   |     | SPC |     |   |     | ENT |BS/DEL|
                         bindings = <
    &none &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3   &none    &none     &none     &none     &none     &none
-   &none &none      &kp C_PREV   &kp C_PP     &kp C_NEXT   &kp C_VOL_UP   &kp DEL  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none
+   &none &none      &hm LALT C_PREV &hm LCTRL C_PP &hm LSHFT C_NEXT &kp C_VOL_UP   &kp DEL &hm RSHFT LEFT &hm RCTRL DOWN &hm RALT UP &hm RGUI RIGHT &none
    &none &none      &none        &none        &none        &kp C_VOL_DN   &kp ESC  &kp HOME  &kp PG_DN &kp PG_UP &kp END   &none
                                                &trans       &kp SPACE      &trans    &trans   &kp RET   &td_bspc
                         >;
