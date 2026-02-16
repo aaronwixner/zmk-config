@@ -88,12 +88,12 @@
                 nav_layer {
 // -----------------------------------------------------------------------------------------
 // |     |BTCLR| BT1 | BT2 | BT3 | BT4 |   |     |     |     |     |     |     |
-// |     |     |PV/AL|PL/CT|NX/SF| VOLU|   | DEL |LF/SF|DN/CT|UP/AL|RT/GU|     |
+// |     |     |PV/AL|PL/CT|NX/SF| VOLU|   | DEL |LF/SF|UP/CT|DN/AL|RT/GU|     |
 // |     |     |     |     |     | VOLD|   | ESC | HOME| PGDN| PGUP| END |     |
 //                   |     | SPC |     |   |     | ENT | BSPC |
                         bindings = <
    &none &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3   &none    &none     &none     &none     &none     &none
-   &none &none      &hm LALT C_PREV &hm LCTRL C_PP &hm LSHFT C_NEXT &kp C_VOL_UP   &kp DEL &hm RSHFT LEFT &hm RCTRL DOWN &hm RALT UP &hm RGUI RIGHT &none
+   &none &none      &hm LALT C_PREV &hm LCTRL C_PP &hm LSHFT C_NEXT &kp C_VOL_UP   &kp DEL &hm RSHFT LEFT &hm RCTRL UP &hm RALT DOWN &hm RGUI RIGHT &none
    &none &none      &none        &none        &none        &kp C_VOL_DN   &kp ESC  &kp HOME  &kp PG_DN &kp PG_UP &kp END   &none
                                                &trans       &kp SPACE      &trans    &trans   &kp RET   &kp BSPC
                         >;
