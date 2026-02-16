@@ -30,12 +30,6 @@
                         tapping-term-ms = <200>;
                         bindings = <&kp ESC>, <&kp TAB>;
                 };
-                td_bspc: tap_dance_bspc {
-                        compatible = "zmk,behavior-tap-dance";
-                        #binding-cells = <0>;
-                        tapping-term-ms = <200>;
-                        bindings = <&kp BSPC>, <&kp DEL>;
-                };
         };
 
         conditional_layers {
@@ -54,12 +48,12 @@
 // |     |  '  |  ,  |  .  |  P  |  Y  |   |  F  |  G   |  C  |  R  |  L  |     |
 // |     |A/GUI|O/ALT|E/CTL|U/SFT|  I  |   |  D  |H/SFT |T/CTL|N/ALT|S/GUI|     |
 // |     |  ;  |  Q  |  J  |  K  |  X  |   |  B  |  M   |  W  |  V  |  Z  |     |
-//                   |ES/TB| SPC | NUM |   | SYM | ENT  |BS/DEL|
+//                   |ES/TB| SPC | NUM |   | SYM | ENT  | BSPC |
                         bindings = <
    &none &kp SQT    &kp COMMA  &kp DOT    &kp P      &kp Y   &kp F &kp G      &kp C      &kp R     &kp L     &none
    &none &hm LGUI A &hm LALT O &hm LCTRL E &hm LSHFT U &kp I   &kp D &hm RSHFT H &hm RCTRL T &hm RALT N &hm RGUI S &none
    &none &kp SEMI   &kp Q      &kp J      &kp K      &kp X   &kp B &kp M      &kp W      &kp V     &kp Z     &none
-                                &td_esc    &kp SPACE  &mo NUMS    &mo SYMS &kp RET &td_bspc
+                                &td_esc    &kp SPACE  &mo NUMS    &mo SYMS &kp RET &kp BSPC
                         >;
                 };
 
@@ -68,12 +62,12 @@
 // |     | F1  | F2  | F3  | F4  |     |   | DEL |  7  |  8  |  9  | NUM |     |
 // |     |F5/GU|F6/AL|F7/CT|F8/SF|     |   | TAB |4/SFT|5/CTL|6/ALT| ./GU|     |
 // |     | F9  | F10 | F11 | F12 |     |   |  0  |  1  |  2  |  3  | ESC |     |
-//                   |     | SPC |     |   |     | ENT |BS/DEL|
+//                   |     | SPC |     |   |     | ENT | BSPC |
                         bindings = <
    &none &kp F1 &kp F2  &kp F3  &kp F4  &none     &kp DEL &kp N7 &kp N8 &kp N9 &kp KP_NUM &none
    &none &hm LGUI F5 &hm LALT F6 &hm LCTRL F7 &hm LSHFT F8 &none   &kp TAB &hm RSHFT N4 &hm RCTRL N5 &hm RALT N6 &hm RGUI DOT &none
    &none &kp F9 &kp F10 &kp F11 &kp F12 &none     &kp N0  &kp N1 &kp N2 &kp N3 &kp ESC    &none
-                         &trans  &kp SPACE &trans   &trans  &kp RET &td_bspc
+                         &trans  &kp SPACE &trans   &trans  &kp RET &kp BSPC
                         >;
                 };
 
@@ -82,12 +76,12 @@
 // |     |  ,  |  %  |  @  |  '  |  :  |   |  ^  |  &  |  *  |  $  |     |     |
 // |     | //GU| {/AL| ;/CT| (/SF|  +  |   |  -  | )/SF| =/CT| }/AL| `/GU|     |
 // |     |  #  |  ~  |  &  |  ?  |  |  |   |  \  |  !  |  [  |  ]  |  _  |     |
-//                   | GUI | SPC |     |   |     | ENT |BS/DEL|
+//                   | GUI | SPC |     |   |     | ENT | BSPC |
                         bindings = <
    &none &kp COMMA &kp PRCNT &kp AT    &kp SQT  &kp COLON   &kp CARET &kp AMPS  &kp ASTRK &kp DLLR &none    &none
    &none &hm LGUI FSLH &hm LALT LBRC &hm LCTRL SEMI &hm LSHFT LPAR &kp PLUS   &kp MINUS &hm RSHFT RPAR &hm RCTRL EQUAL &hm RALT RBRC &hm RGUI GRAVE &none
    &none &kp HASH  &kp TILDE &kp AMPS  &kp QMARK &kp PIPE   &kp BSLH  &kp EXCL  &kp LBKT  &kp RBKT &kp UNDER &none
-                              &kp LGUI  &kp SPACE &trans      &trans    &kp RET   &td_bspc
+                              &kp LGUI  &kp SPACE &trans      &trans    &kp RET   &kp BSPC
                         >;
                 };
 
@@ -96,12 +90,12 @@
 // |     |BTCLR| BT1 | BT2 | BT3 | BT4 |   |     |     |     |     |     |     |
 // |     |     |PV/AL|PL/CT|NX/SF| VOLU|   | DEL |LF/SF|DN/CT|UP/AL|RT/GU|     |
 // |     |     |     |     |     | VOLD|   | ESC | HOME| PGDN| PGUP| END |     |
-//                   |     | SPC |     |   |     | ENT |BS/DEL|
+//                   |     | SPC |     |   |     | ENT | BSPC |
                         bindings = <
    &none &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3   &none    &none     &none     &none     &none     &none
    &none &none      &hm LALT C_PREV &hm LCTRL C_PP &hm LSHFT C_NEXT &kp C_VOL_UP   &kp DEL &hm RSHFT LEFT &hm RCTRL DOWN &hm RALT UP &hm RGUI RIGHT &none
    &none &none      &none        &none        &none        &kp C_VOL_DN   &kp ESC  &kp HOME  &kp PG_DN &kp PG_UP &kp END   &none
-                                               &trans       &kp SPACE      &trans    &trans   &kp RET   &td_bspc
+                                               &trans       &kp SPACE      &trans    &trans   &kp RET   &kp BSPC
                         >;
                 };
         };
